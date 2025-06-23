@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>@prokye Voucher Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00ffee;
+    }
+
+    .telegram-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #0088cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .voucher-panel {
+      background: #222;
+      border-radius: 10px;
+      padding: 20px;
+      max-height: 500px;
+      overflow-y: scroll;
+    }
+
+    .voucher {
+      background: #333;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border-left: 5px solid #00ffee;
+    }
+
+    .voucher:nth-child(even) {
+      border-left-color: #ff00cc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>@prokye Voucher Tracker</h1>
+    <a class="telegram-button" href="https://t.me/prokye" target="_blank">Message @prokye on Telegram</a>
+  </header>
+
+  <div class="container">
+    <h2>Total Vouches: 1000+</h2>
+    <div class="voucher-panel">
+      <!-- Voucher Entries -->
+      <!-- These are fake placeholders. Replace with real data if needed -->
+      <script>
+        const panel = document.currentScript.parentElement;
+        for (let i = 1; i <= 1000; i++) {
+          const div = document.createElement('div');
+          div.className = 'voucher';
+          div.textContent = `✅ Vouch #${i}: @prokye came through with the deal 💸`;
+          panel.appendChild(div);
+        }
+      </script>
+    </div>
+  </div>
+
+</body>
+</html>
