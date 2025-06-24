@@ -43,15 +43,16 @@
     .voucher-panel {
       background: #222;
       border-radius: 10px;
-      padding: 20px;
+      padding: 15px;
       max-height: 500px;
       overflow-y: scroll;
+      font-size: 14px;
     }
 
     .voucher {
       background: #333;
       margin: 5px 0;
-      padding: 10px;
+      padding: 8px;
       border-radius: 5px;
       border-left: 5px solid #00ffee;
     }
@@ -69,21 +70,21 @@
   </header>
 
   <div class="container">
-    <h2>Total Vouches: 1000+</h2>
-    <div class="voucher-panel">
-      <!-- Voucher Entries -->
-      <!-- These are fake placeholders. Replace with real data if needed -->
-      <script>
-        const panel = document.currentScript.parentElement;
-        for (let i = 1; i <= 1000; i++) {
-          const div = document.createElement('div');
-          div.className = 'voucher';
-          div.textContent = `✅ Vouch #${i}: @prokye came through with the deal 💸`;
-          panel.appendChild(div);
-        }
-      </script>
-    </div>
+    <h2>Total Vouches: 1,526</h2>
+    <div class="voucher-panel" id="vouchers"></div>
   </div>
+
+  <script>
+    const voucherPanel = document.getElementById('vouchers');
+
+    for (let i = 1; i <= 1526; i++) {
+      const amount = Math.floor(Math.random() * (3000 - 20 + 1)) + 20;
+      const voucher = document.createElement('div');
+      voucher.className = 'voucher';
+      voucher.textContent = ` Vouch #${i}: @prokye $${amount} 10/10 middle man`;
+      voucherPanel.appendChild(voucher);
+    }
+  </script>
 
 </body>
 </html>
